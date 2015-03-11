@@ -80,8 +80,7 @@ function postLoad() {
           $('#results').fadeIn(300);
           $('#results').html('');
           var songs = [
-            'moon flow',
-            'sanctuary'
+            // Your list of songs goes here!
           ];
           for (var song in songs) {
             $('#results').append('<span class="opt">' + songs[song] + '</span><br/>');
