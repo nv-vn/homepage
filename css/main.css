@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'typewriter';
+  src: url('../fonts/inconsolata.otf');
+}
+
+body {
+  background-color: #282828;
+}
+
+audio {
+  display: none;
+}
+
+div.welcome {
+  margin-left: 42.75%;
+  margin-bottom: 600px;
+}
+
+h1.typewriter {
+  font-family: 'typewriter';
+  color: #3e3e3e;
+}
+
+span.hidden {
+  opacity: 0.0;
+}
+
+div.terminal {
+  font-family: 'typewriter';
+  color: #ffffff;
+  font-size: 0;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+div#who {
+  display: inline;
+  background-color: #8AE234;
+  color: #000000;
+  font-size: 16px;
+}
+
+div#at {
+  display: inline;
+  background-color: #729FCF;
+  font-size: 16px;
+}
+
+div#prompt {
+  display: inline;
+  background-color: #ffffff;
+  font-size: 16px;
+}
+
+div#who-sep {
+  display: inline;
+  color: #8AE234;
+  background-color: #729FCF;
+  font-size: 16px;
+}
+
+div#at-sep {
+  display: inline;
+  color: #729FCF;
+  background-color: #ffffff;
+  font-size: 16px;
+}
+
+div#prompt-sep {
+  display: inline;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+input.term-input {
+  font-family: 'typewriter';
+  font-size: 16px;
+  background-color: #282828;
+  color: #ffffff;
+  border: 0px;
+}
+
+div#results {
+  font-family: 'typewriter';
+  font-size: 30px;
+  background-color: #282828;
+  color: #3e3e3e;
+}
