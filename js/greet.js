@@ -42,15 +42,9 @@ function postLoad() {
         mode = 'ls';
         $('#results').fadeOut(0);
         $('#results').fadeIn(300);
+        // Edit these to change the output of `ls`
         $('#results').html('<span class="opt">4chan.org/g/</span><br />');
-        $('#results').append('<span class="opt">4chan.org/gd/</span><br />');
-        $('#results').append('<span class="opt">4chan.org/int/</span><br />');
-        $('#results').append('<span class="opt">reddit.com</span><br />');
-        $('#results').append('<span class="opt">mail.cock.li</span><br />');
-        $('#results').append('<span class="opt">pomf.se</span><br />');
-        $('#results').append('<span class="opt">github.com</span><br />');
-        $('#results').append('<span class="opt">animebacon.tv/anime_detail.php?id=77</span><br />')
-        $('#results').append('<span class="opt">gnu.slack.com/messages/general</span><br />');
+        $('#results').append('<span class="opt">4chan.org/gd/</span><br />'); // Copy this line for all options after 1
       } else if (split[0] == 'cd') {
         var url = split[1].charAt(0) == '~'
           ? 'file://' + split[1].replace('~', getHome())
@@ -66,11 +60,9 @@ function postLoad() {
         squery = split.splice(1, split.length).join(' ');
         $('#results').fadeOut(0);
         $('#results').fadeIn(300);
+        // Edit these to change the output of the `find` command
         $('#results').html('<span class="opt">google</span><br />');
         $('#results').append('<span class="opt">duckduckgo</span><br />');
-        $('#results').append('<span class="opt">youtube</span><br />');
-        $('#results').append('<span class="opt">amazon</span><br />');
-        $('#results').append('<span class="opt">/g/</span><br />');
       } else if (split[0] == 'play') {
         squery = split.splice(1, split.length).join(' ');
         if (squery === '') {
@@ -120,20 +112,12 @@ function postLoad() {
         $('#music').html(tag);
       } else if (selecting && mode == 'find') {
         switch($($('.opt')[(tabSelection - 1) % $('.opt').length]).html()) {
+          // Add all cases here to handle the selection in the `find` command
           case 'google':
             window.open('https://www.google.com/search?q=' + squery, '_blank');
             break;
           case 'duckduckgo':
             window.open('https://duckduckgo.com/?q=' + squery, '_blank');
-            break;
-          case 'youtube':
-            window.open('https://www.youtube.com/results?search_query=' + squery, '_blank');
-            break;
-          case 'amazon':
-            window.open('http://www.amazon.com/s/ref=nb_sb_noss?field-keywords=' + squery, '_blank');
-            break;
-          case '/g/':
-            window.open('http://boards.4chan.org/g/catalog#s=' + squery, '_blank');
             break;
         }
       }
